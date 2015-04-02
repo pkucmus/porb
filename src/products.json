@@ -1,0 +1,1 @@
+[{"fields": {"name": "Laptop ASUS", "price_gross": "3000"}, "model": "products.product", "pk": 1}, {"fields": {"name": "Laptop HP", "price_gross": "4000"}, "model": "products.product", "pk": 2}, {"fields": {"name": "Laptop Lenovo", "price_gross": "3000"}, "model": "products.product", "pk": 3}]

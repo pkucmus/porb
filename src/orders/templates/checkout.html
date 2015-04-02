@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% load url from future %}
+
+{% block content %}
+
+<h2>Zamówienie</h2>
+
+<h4>Wybrany przez Ciebie przedmiot to:</h4>
+
+<p>
+  {{ product.name }} ({{product.price_gross|intcomma}} zł)
+</p>
+
+<form action="." method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="zamawiam"/>
+</form>
+
+{% endblock content %}

@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"in",
+				"input"
+			],
+			[
+				"p",
+				"product"
+			],
+			[
+				"pa",
+				"path	module"
+			],
+			[
+				"pro",
+				"products	module"
+			],
+			[
+				"O",
+				"OrderPossition	class"
+			],
+			[
+				"Em",
+				"EmailField	class"
+			],
+			[
+				"max",
+				"max_length"
+			],
+			[
 				"auto",
 				"auto_now_add	param"
 			],
@@ -14,14 +42,6 @@
 			[
 				"pr",
 				"property	class"
-			],
-			[
-				"p",
-				"property	New Property"
-			],
-			[
-				"max",
-				"max_digits	param"
 			],
 			[
 				"se",
@@ -46,10 +66,6 @@
 			[
 				"rest",
 				"rest_framework"
-			],
-			[
-				"in",
-				"instance	param"
 			],
 			[
 				"chan",
@@ -176,26 +192,21 @@
 	"buffers":
 	[
 		{
-			"file": "src/porb/settings.py",
+			"file": "src/products/views.py",
 			"settings":
 			{
-				"buffer_size": 2083,
+				"buffer_size": 487,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/products/models.py",
+			"contents": "{% extends 'base.html' %}\n{% load humanize %}\n{% load url from future %}\n\n{% block content %}\n\n<h2>Zamówienie</h2>\n\n<h4>Wybrany przez Ciebie przedmiot to:</h4>\n\n<p>\n  {{ product.name }} ({{product.price_gross|intcomma}} zł)\n</p>\n\n<form action=\".\" method=\"post\">\n  {% csrf_token %}\n  <label>Akceptuję <a href=\"\">regulamin</a></label>\n  <input type=\"checkbox\" name=\"acceptance\"/>\n  <input type=\"submit\" value=\"zamawiam\"/>\n</form>\n\n{% endblock content %}\n",
+			"file": "src/products/templates/product_details.html",
+			"file_size": 0,
+			"file_write_time": 130722201779195683,
 			"settings":
 			{
-				"buffer_size": 624,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/customers/models.py",
-			"settings":
-			{
-				"buffer_size": 423,
+				"buffer_size": 452,
 				"line_ending": "Unix"
 			}
 		},
@@ -203,15 +214,63 @@
 			"file": "src/orders/models.py",
 			"settings":
 			{
-				"buffer_size": 181,
+				"buffer_size": 395,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/pawel/.virtualenvs/porb/lib/python2.7/site-packages/django/db/models/fields/__init__.py",
+			"file": "src/orders/views.py",
 			"settings":
 			{
-				"buffer_size": 75894,
+				"buffer_size": 293,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/orders/templates/checkout.html",
+			"settings":
+			{
+				"buffer_size": 452,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/products/templates/homepage.html",
+			"settings":
+			{
+				"buffer_size": 326,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/porb/urls.py",
+			"settings":
+			{
+				"buffer_size": 583,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/products/models.py",
+			"settings":
+			{
+				"buffer_size": 648,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/porb/templates/base.html",
+			"settings":
+			{
+				"buffer_size": 198,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/porb/settings.py",
+			"settings":
+			{
+				"buffer_size": 2174,
 				"line_ending": "Unix"
 			}
 		}
@@ -223,10 +282,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 105.0,
-		"last_filter": "",
+		"height": 140.0,
+		"last_filter": "install",
 		"selected_items":
 		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
 			[
 				"blame",
 				"Git: Blame"
@@ -304,15 +367,11 @@
 				"Package Control: Install Package"
 			],
 			[
-				"install",
-				"Package Control: Install Package"
-			],
-			[
 				"insta",
 				"Package Control: Install Package"
 			]
 		],
-		"width": 457.0
+		"width": 583.0
 	},
 	"console":
 	{
@@ -336,11 +395,22 @@
 		"/home/pawel/Development/porb/src",
 		"/home/pawel/Development/porb/src/customers",
 		"/home/pawel/Development/porb/src/orders",
-		"/home/pawel/Development/porb/src/porb"
+		"/home/pawel/Development/porb/src/porb",
+		"/home/pawel/Development/porb/src/porb/templates",
+		"/home/pawel/Development/porb/src/products",
+		"/home/pawel/Development/porb/src/products/templates"
 	],
 	"file_history":
 	[
+		"/home/pawel/Development/porb/src/porb/urls.py",
+		"/home/pawel/.virtualenvs/porb/lib/python2.7/site-packages/django/views/generic/base.py",
+		"/home/pawel/Development/porb/src/products/models.py",
+		"/home/pawel/Development/porb/src/customers/models.py",
+		"/home/pawel/Development/porb/src/orders/admin.py",
+		"/home/pawel/Development/porb/src/orders/models.py",
 		"/home/pawel/Development/porb/src/customers/admin.py",
+		"/home/pawel/Development/porb/src/products/admin.py",
+		"/home/pawel/.virtualenvs/porb/lib/python2.7/site-packages/django/db/models/fields/__init__.py",
 		"/home/pawel/Development/porb/porb.sublime-project",
 		"/home/pawel/.local/share/Steam/steamapps/common/Besiege/Besiege_Data/Managed/Assembly-UnityScript.dll",
 		"/home/pawel/Development/newcomlink/ncl/local_settings.py",
@@ -459,15 +529,7 @@
 		"/home/pawel/Development/newcomlink/ncl/wsdl/nclcredit.wsdl",
 		"/home/pawel/Development/newcomlink/ncl/fabfile.py",
 		"/home/pawel/Development/newcomlink/gunnery/run/uwsgi.emperor.pid",
-		"/home/pawel/Development/newcomlink/gunnery/run/uwsgi.gunnery.pid",
-		"/home/pawel/Development/newcomlink/gunnery/.gitmodules",
-		"/home/pawel/Development/newcomlink/gunnery/Makefile",
-		"/home/pawel/Development/newcomlink/ncl/lenders/rac/converters.py",
-		"/home/pawel/Development/newcomlink/ncl/partner/static/ncl/js/autocomplete.js",
-		"/home/pawel/Development/newcomlink/ncl/api/tests/VnuApiTest.py",
-		"/home/pawel/Development/newcomlink/data_storage/requirements.pip",
-		"/home/pawel/Development/newcomlink/data_storage/request_data/management/commands/remove_expired_entries.py",
-		"/home/pawel/Development/newcomlink/README.md"
+		"/home/pawel/Development/newcomlink/gunnery/run/uwsgi.gunnery.pid"
 	],
 	"find":
 	{
@@ -539,34 +601,32 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/porb/settings.py",
+					"file": "src/products/views.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2083,
+						"buffer_size": 487,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1050,
-								1050
+								342,
+								342
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 300.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -574,80 +634,25 @@
 				},
 				{
 					"buffer": 1,
-					"file": "src/products/models.py",
+					"file": "src/products/templates/product_details.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 624,
+						"buffer_size": 452,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								624,
-								624
+								229,
+								229
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/customers/models.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 423,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								364,
-								364
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/orders/models.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 181,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								181,
-								181
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -657,20 +662,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "/home/pawel/.virtualenvs/porb/lib/python2.7/site-packages/django/db/models/fields/__init__.py",
+					"buffer": 2,
+					"file": "src/orders/models.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 75894,
+						"buffer_size": 395,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4794,
-								4794
+								199,
+								199
 							]
 						],
 						"settings":
@@ -680,17 +685,221 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1566.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/orders/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 293,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								154,
+								154
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/orders/templates/checkout.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 452,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								45,
+								45
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/products/templates/homepage.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 326,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								241,
+								241
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/porb/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 583,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								357,
+								357
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/products/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 648,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								422,
+								422
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/porb/templates/base.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 198,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								126,
+								126
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
 		},
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 9,
+					"file": "src/porb/settings.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2174,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1995,
+								1995
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1200.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				}
 			]
 		}
 	],

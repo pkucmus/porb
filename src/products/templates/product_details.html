@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% load url from future %}
+
+{% block content %}
+
+<h2>Szczegóły produktu</h2>
+
+<p>
+  {{ product.name }} ({{product.price_gross|intcomma}} zł)
+</p>
+
+<a href="{% url 'checkout' product.id %}">Zamawiam</a>
+
+<!-- <form action="{% url 'checkout' product.id %}" method="post">
+  {% csrf_token %}
+  <label>Akceptuję <a href="">regulamin</a></label>
+  <input type="checkbox" name="acceptance"/>
+  <input type="hidden" name="product_id" value="{{ product.id }}"/>
+  <input type="submit" value="zamawiam"/>
+</form> -->
+
+{% endblock content %}

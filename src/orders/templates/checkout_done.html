@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% load url from future %}
+
+{% block content %}
+
+<h2>Dziękujemy</h2>
+
+<p>
+  Twoje zamówienie o numerze: {{ order.id }} zostało przyjęte do realizacji
+</p>
+
+<p>
+  <b>Dane adresowe:</b></br>
+  {{ order.address }}
+</p>
+
+{% endblock content %}

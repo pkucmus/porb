@@ -1,2 +1,14 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% load url from future %}
+
 {% block content %}
+<ul>
+  {% for product in products %}
+    <li>
+      {{ product.name }} ({{product.price_gross|intcomma}} zł)
+      <a href="{% url 'product_details' product.id %}">szczegóły</a>
+    </li>
+  {% endfor %}
+</ul>
 {% endblock content %}
