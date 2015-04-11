@@ -6,9 +6,25 @@
 
 <h2>Szczegóły produktu</h2>
 
+{% for image in product.images.all %}
+  <img src='{{image}}' />
+{% endfor %}
 <p>
   {{ product.name }} ({{product.price_gross|intcomma}} zł)
 </p>
+<p>
+  Opis:
+  {{ product.description }}
+</p>
+Cechy:
+<ul>
+  {% for attribute in product.attribute.all %}
+    <li>
+      {{ attribute.attribute_type.name }}: {{ attribute.value }}
+    </li>
+  {% endfor %}
+</ul>
+
 
 <a href="{% url 'checkout' product.id %}">Zamawiam</a>
 
