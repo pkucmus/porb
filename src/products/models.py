@@ -1,5 +1,6 @@
 from django.db import models
-from django.conf import settings
+
+from sorl.thumbnail import ImageField
 
 # class Category(models.Model):
 #     parent = models.ForeignKey('self', related_name='sub_categories')
@@ -44,7 +45,7 @@ class Product(models.Model):
 
 class ProductImage(models.Model):
     product = models.ForeignKey(Product, related_name='images')
-    image = models.ImageField(
-        upload_to='{}/products/'.format(settings.MEDIA_ROOT),
+    image = ImageField(
+        upload_to='products/',
         verbose_name='photo'
     )

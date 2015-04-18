@@ -1,0 +1,18 @@
+body {
+  background-color: #f3f3f3; }
+
+.grid-sizer {
+  width: 23.5%; }
+
+.gutter-sizer {
+  width: 2%; }
+
+.product {
+  box-sizing: border-box;
+  width: 23.5%;
+  margin: 0; }
+  .product .caption p.description {
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
+/*# sourceMappingURL=default.css.map */

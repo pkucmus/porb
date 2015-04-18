@@ -1,0 +1,4 @@
+Django==1.8
+Pillow==2.8.1
+pdbpp==0.8.2
+sorl-thumbnail==12.2

@@ -1,15 +1,12 @@
 {% extends 'base.html' %}
-{% load humanize %}
-{% load url from future %}
 
 {% block content %}
-<ul>
-  {% for product in products %}
-    <li>
-      <img src='http://www.lenovo.com/images/OneWebImages/FormFactor/Laptops/IdeaPad/400x300/lenovo-laptop-ideapad-yoga-13-orange-back.png' />
-      {{ product.name }} ({{product.price_gross|intcomma}} zł)
-      <a href="{% url 'product_details' product.id %}">szczegóły</a>
-    </li>
-  {% endfor %}
-</ul>
+  <div class="products-thumbnails js-packery"
+    data-packery-options='{ "gutter": ".gutter-sizer" , "itemSelector": ".product", "columnWidth": ".grid-sizer" }'>
+    <div class="grid-sizer"></div>
+    <div class="gutter-sizer"></div>
+    {% for product in products %}
+      {% include '_product_thumbnail.html' %}
+    {% endfor %}
+  </div>
 {% endblock content %}
