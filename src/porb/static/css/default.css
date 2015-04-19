@@ -1,5 +1,6 @@
 body {
-  background-color: #f3f3f3; }
+  background-color: #f3f3f3;
+  padding-top: 70px; }
 
 .grid-sizer {
   width: 23.5%; }
@@ -14,5 +15,11 @@ body {
   .product .caption p.description {
     overflow: hidden;
     text-overflow: ellipsis; }
+
+.product-detail .item img {
+  height: 400px; }
+
+.footer {
+  margin-top: 30px; }
 
 /*# sourceMappingURL=default.css.map */

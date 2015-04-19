@@ -7,98 +7,49 @@
     <link rel="stylesheet" href="{% static 'css/default.css' %}"/>
   </head>
   <body>
-    <div class="container">
-      <nav class="navbar navbar-inverse" role="navigation">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle"
-            data-toggle="collapse" data-target="#bs-example-navbar-collapse-5">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Sklep internetowy</a>
-          </div>
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-5">
-            <ul class="nav navbar-nav">
-              <li class="active">
-                <a href="#">Link</a>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  Dropdown
-                  <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu" role="menu">
-                  <li class="dropdown-header">Setting</li>
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li class="active"><a href="#">Separated link</a></li>
-                  <li class="divider"></li>
-                  <li class="disabled"><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle"
+          data-toggle="collapse" data-target="#bs-example-navbar-collapse-5">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Sklep internetowy</a>
         </div>
-      </nav>
-      <div class="row">
-        <div class="col-xs-12">
-          <form class="form-inline">
-              <input type="text" class="form-control">
-              <input type="text" class="form-control">
-              <input type="text" class="form-control col-xs-6">
-              <input type="text" class="form-control col-xs-6">
-            <button type="submit" class="btn btn-default">Send invitation</button>
-          </form>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-5">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="#">Link</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Dropdown
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-header">Setting</li>
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="active"><a href="#">Separated link</a></li>
+                <li class="divider"></li>
+                <li class="disabled"><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
+    <div class="container">
+
       {% block content %}
       {% endblock content %}
-      <div class="row">
-        <div class="col-md-12">
-          <div class="footer">
-            <div class="container">
-              <div class="clearfix">
-                <div class="footer-logo">
-                  <a href="#"><img src="img/footer-logo.png">Bootflat</a>
-                </div>
-                <dl class="footer-nav">
-                  <dt class="nav-title">PORTFOLIO</dt>
-                  <dd class="nav-item"><a href="#">Web Design</a></dd>
-                  <dd class="nav-item"><a href="#">Branding &amp; Identity</a></dd>
-                  <dd class="nav-item"><a href="#">Mobile Design</a></dd>
-                  <dd class="nav-item"><a href="#">Print</a></dd>
-                  <dd class="nav-item"><a href="#">User Interface</a></dd>
-                </dl>
-                <dl class="footer-nav">
-                  <dt class="nav-title">ABOUT</dt>
-                  <dd class="nav-item"><a href="#">The Company</a></dd>
-                  <dd class="nav-item"><a href="#">History</a></dd>
-                  <dd class="nav-item"><a href="#">Vision</a></dd>
-                </dl>
-                <dl class="footer-nav">
-                  <dt class="nav-title">GALLERY</dt>
-                  <dd class="nav-item"><a href="#">Flickr</a></dd>
-                  <dd class="nav-item"><a href="#">Picasa</a></dd>
-                  <dd class="nav-item"><a href="#">iStockPhoto</a></dd>
-                  <dd class="nav-item"><a href="#">PhotoDune</a></dd>
-                </dl>
-                <dl class="footer-nav">
-                  <dt class="nav-title">CONTACT</dt>
-                  <dd class="nav-item"><a href="#">Basic Info</a></dd>
-                  <dd class="nav-item"><a href="#">Map</a></dd>
-                  <dd class="nav-item"><a href="#">Conctact Form</a></dd>
-                </dl>
-              </div>
-              <div class="footer-copyright text-center">Copyright © 2014 Flathemes.All rights reserved.</div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+      {% include '_footer.html' %}
     </div>
     <script type="text/javascript" src="{% static 'js/jquery-1.10.1.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>

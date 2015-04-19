@@ -1,39 +1,72 @@
 {% extends 'base.html' %}
-{% load humanize %}
 {% load url from future %}
+{% load thumbnail %}
 
 {% block content %}
 
-<h2>Szczegóły produktu</h2>
+<div class="jumbotron product-detail">
+  <div id="product-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      {% for image in product.images.all %}
+      <li data-target="#product-carousel" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.counter == 1 %}active{% endif %}"></li>
+      {% endfor %}
+    </ol>
+    <div class="carousel-inner">
+      {% for image in product.images.all %}
+        {% thumbnail image.image "1000x400" format="PNG" crop="center" as im %}
+        <div class="item {% if forloop.counter == 1 %}active{% endif %}">
+          <img src="{{ im.url }}">
+        </div>
+        {% endthumbnail %}
+      {% endfor %}
+    </div>
+    <a class="left carousel-control" href="#product-carousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#product-carousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+  <div class="jumbotron-contents">
+    <div class="row">
+      <div class="col-xs-8">
+        <h1>{{ product.name }}</h1>
+        <h2>Opis</h2>
+        <p>
+          {{ product.description }}
+        </p>
+        <p>
+          <ul>
+            {% for attribute in product.attribute.all %}
+              <li>
+                {{ attribute.attribute_type.name }}: {{ attribute.value }}
+              </li>
+            {% endfor %}
+          </ul>
+        </p>
+      </div>
+      <div class="col-xs-4">
+        <div class="pricing pull-right">
+          <ul>
+            <li class="unit price-success">
+              <div class="price-title">
+                <h3>{{ product.price_gross|floatformat:2 }} zł</h3>
+                <p>za sztukę</p>
+              </div>
+              <div class="price-body">
+                <h4>Darmowa dostawa?</h4>
+                <p>Możliwość darmowej dostawy</p>
+              </div>
+              <div class="price-foot">
+                <a href="{% url 'checkout' product.id %}" class="btn btn-success">Kup teraz</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-{% for image in product.images.all %}
-  <img src='{{image}}' />
-{% endfor %}
-<p>
-  {{ product.name }} ({{product.price_gross|intcomma}} zł)
-</p>
-<p>
-  Opis:
-  {{ product.description }}
-</p>
-Cechy:
-<ul>
-  {% for attribute in product.attribute.all %}
-    <li>
-      {{ attribute.attribute_type.name }}: {{ attribute.value }}
-    </li>
-  {% endfor %}
-</ul>
-
-
-<a href="{% url 'checkout' product.id %}">Zamawiam</a>
-
-<!-- <form action="{% url 'checkout' product.id %}" method="post">
-  {% csrf_token %}
-  <label>Akceptuję <a href="">regulamin</a></label>
-  <input type="checkbox" name="acceptance"/>
-  <input type="hidden" name="product_id" value="{{ product.id }}"/>
-  <input type="submit" value="zamawiam"/>
-</form> -->
 
 {% endblock content %}

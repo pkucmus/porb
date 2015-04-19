@@ -1,26 +1,26 @@
 {% load url from future %}
-{% load thumbnail %}
 
 <div class="thumbnail product">
-  <!-- {% thumbnail product.images.first.image "231x130" format="PNG" crop="center" as im %}
-    <img class="img-rounded" src="{{ im.url }}"width="{{ im.width }}" height="{{ im.height }}">
-  {% endthumbnail %} -->
   <img class="img-rounded" src="{{ product.images.first.image.url }}">
   <div class="caption text-center">
     <h3>{{ product.name }}</h3>
     <p class="description">
       {{ product.description }}
-      <strong>{{ product.price_gross|floatformat:2 }} zł</strong>
     </p>
     <p>
-      <a href="{% url 'product_details' product.id %}"
-      class="btn btn-warning" role="button">
-        Zamów
-      </a>
-      <a href="{% url 'product_details' product.id %}"
-      class="btn btn-warning" role="button">
-        Szczegóły
-      </a>
+      <span class="label label-success">{{ product.price_gross|floatformat:2 }} zł</span>
+    </p>
+    <p>
+      <div class="btn-group" role="group">
+        <a href="{% url 'product_details' product.id %}"
+        class="btn btn-info btn-lg" role="button">
+          <i class="glyphicon glyphicon-shopping-cart"></i>
+        </a>
+        <a href="{% url 'product_details' product.id %}"
+        class="btn btn-warning btn-lg" role="button">
+          <i class="glyphicon glyphicon-search"></i>
+        </a>
+      </div>
     </p>
   </div>
 </div>
