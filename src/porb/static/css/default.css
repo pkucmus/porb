@@ -22,4 +22,7 @@ body {
 .footer {
   margin-top: 30px; }
 
+.btn-group .glyphicon {
+  line-height: 20px; }
+
 /*# sourceMappingURL=default.css.map */

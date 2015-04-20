@@ -2,13 +2,20 @@ from django.db import models
 
 from sorl.thumbnail import ImageField
 
-# class Category(models.Model):
-#     parent = models.ForeignKey('self', related_name='sub_categories')
-#     name = models.CharField(max_length=128)
 
-#     @property
-#     def products(self):
-#         return self.products.all()
+class Category(models.Model):
+    parent = models.ForeignKey(
+        'self',
+        related_name='sub_categories', null=True, blank=True
+    )
+    name = models.CharField(max_length=128)
+
+    @property
+    def products(self):
+        return self.products.all()
+
+    def __str__(self):
+        return self.name
 
 
 class AttributeType(models.Model):
@@ -28,7 +35,7 @@ class Attribute(models.Model):
 
 class Product(models.Model):
     name = models.CharField(max_length=128)
-    # category = models.ForeignKey(Category, related_name='products')
+    category = models.ForeignKey(Category, related_name='products')
     description = models.TextField(null=True, blank=True)
     attribute = models.ManyToManyField(Attribute, related_name=u'attributes')
     price_gross = models.DecimalField(max_digits=13, decimal_places=4)

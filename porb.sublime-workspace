@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"st",
+				"static"
+			],
+			[
+				"STATI",
+				"STATIC_URL	statement"
+			],
+			[
 				"pro",
 				"product"
 			],
@@ -116,10 +128,6 @@
 				"next_color	statement"
 			],
 			[
-				"st",
-				"status_code"
-			],
-			[
 				"cha",
 				"channel_partner"
 			],
@@ -215,52 +223,31 @@
 			"file": "src/products/models.py",
 			"settings":
 			{
-				"buffer_size": 1487,
+				"buffer_size": 1455,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "from django.views.generic import TemplateView\nfrom django.shortcuts import render\n\nfrom products.models import Product\nfrom orders.models import Order\nfrom orders.forms import CheckoutForm\n\n\nclass CheckoutView(TemplateView):\n    template_name = 'checkout.html'\n\n    def get_context_data(self, **kwargs):\n        return {\n            'product': Product.objects.get(pk=kwargs['product_id']),\n            'form': CheckoutForm(initial={'product_id': kwargs['product_id']})\n        }\n\n    def get(self, request, *args, **kwargs):\n        context = self.get_context_data(**kwargs)\n        return self.render_to_response(context)\n\n    def post(self, request, *args, **kwargs):\n        form = CheckoutForm(request.POST)\n        if form.is_valid():\n            order = Order.objects.create(\n                status='O',\n                product=Product.objects.get(pk=kwargs['product_id']),\n                address=form.data['address']\n                )\n            return render(request, 'checkout_done.html', {'order': order})\n        context = self.get_context_data(**kwargs)\n        context['form'] = form\n        return self.render_to_response(context)\n\n\n\n",
-			"file": "src/orders/views.py",
-			"file_size": 1147,
-			"file_write_time": 130724828258899651,
+			"file": "src/porb/settings.py",
 			"settings":
 			{
-				"buffer_size": 1150,
+				"buffer_size": 2418,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/orders/models.py",
+			"file": "requirements.pip",
 			"settings":
 			{
-				"buffer_size": 395,
+				"buffer_size": 60,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/pawel/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-			"settings":
-			{
-				"buffer_size": 974,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Package Control Messages\n========================\n\nTheme - Afterglow:\n-----------------\n\n  \n  Welcome to Afterglow Theme\n  \n  \n  To activate the theme, add or replace your current theme settings with the code below.\n  \n  \n  Settings for Afterglow\n  {\n      \"theme\": \"Afterglow.sublime-theme\",\n      \"color_scheme\": \"Packages/Theme - Afterglow/Afterglow.tmTheme\"\n  }\n  \n  Settings for Afterglow-blue\n  {\n      \"theme\": \"Afterglow-blue.sublime-theme\",\n      \"color_scheme\": \"Packages/Theme - Afterglow/Afterglow.tmTheme\"\n  }\n  \n  Settings for Afterglow-magenta\n  {\n      \"theme\": \"Afterglow-magenta.sublime-theme\",\n      \"color_scheme\": \"Packages/Theme - Afterglow/Afterglow.tmTheme\"\n  }\n  \n  Settings for Afterglow-orange\n  {\n      \"theme\": \"Afterglow-orange.sublime-theme\",\n      \"color_scheme\": \"Packages/Theme - Afterglow/Afterglow.tmTheme\"\n  }\n  \n  Settings for Afterglow-green\n  {\n      \"theme\": \"Afterglow-green.sublime-theme\",\n      \"color_scheme\": \"Packages/Theme - Afterglow/Afterglow.tmTheme\"\n  }\n  \n  \n  If you know other settings (height of the tabs, sidebar options, ...), visit this page:\n  https://github.com/YabataDesign/afterglow-theme/blob/master/README.md\n  \n  \n  *** IMPORTANT - Make sure to restart Sublime after installing and activating Afterglow ***\n  \n  \n\nAnaconda:\n--------\n\n  Changes in 1.4.8\n  ================\n  \n  Minor release that just adds a new gutters theme for retina display devices\n  \n  For more detailed information about those changes run git v1.4.7..v1.4.8 on git repository\n  \n",
-			"settings":
-			{
-				"buffer_size": 1518,
-				"line_ending": "Unix",
-				"name": "Package Control Messages",
-				"scratch": true
 			}
 		},
 		{
 			"file": "src/porb/urls.py",
 			"settings":
 			{
-				"buffer_size": 586,
+				"buffer_size": 726,
 				"line_ending": "Unix"
 			}
 		},
@@ -269,6 +256,54 @@
 			"settings":
 			{
 				"buffer_size": 347,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/porb/templates/base.html",
+			"settings":
+			{
+				"buffer_size": 3004,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/products/templates/_search.html",
+			"settings":
+			{
+				"buffer_size": 1094,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/products/templates/product_details.html",
+			"settings":
+			{
+				"buffer_size": 2295,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/products/templates/homepage.html",
+			"settings":
+			{
+				"buffer_size": 443,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/products/templates/_product_thumbnail.html",
+			"settings":
+			{
+				"buffer_size": 822,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/porb/static/sass/default.sass",
+			"settings":
+			{
+				"buffer_size": 517,
 				"line_ending": "Unix"
 			}
 		}
@@ -280,10 +315,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "pack",
+		"height": 400.0,
+		"last_filter": "sass",
 		"selected_items":
 		[
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"html",
+				"HTML: Wrap Selection With Tag"
+			],
 			[
 				"pack",
 				"Package Control: Install Package"
@@ -373,7 +416,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 449.0
+		"width": 457.0
 	},
 	"console":
 	{
@@ -395,19 +438,31 @@
 	[
 		"/home/pawel/Development/porb",
 		"/home/pawel/Development/porb/src",
-		"/home/pawel/Development/porb/src/customers",
-		"/home/pawel/Development/porb/src/customers/migrations",
 		"/home/pawel/Development/porb/src/orders",
 		"/home/pawel/Development/porb/src/orders/migrations",
 		"/home/pawel/Development/porb/src/orders/templates",
 		"/home/pawel/Development/porb/src/porb",
+		"/home/pawel/Development/porb/src/porb/static",
+		"/home/pawel/Development/porb/src/porb/static/css",
+		"/home/pawel/Development/porb/src/porb/static/js",
+		"/home/pawel/Development/porb/src/porb/static/sass/bootflat",
 		"/home/pawel/Development/porb/src/porb/templates",
 		"/home/pawel/Development/porb/src/products",
 		"/home/pawel/Development/porb/src/products/templates"
 	],
 	"file_history":
 	[
+		"/home/pawel/Development/porb/src/products/admin.py",
+		"/home/pawel/Development/porb/src/porb/templates/_footer.html",
+		"/home/pawel/Development/porb/src/products/templates/_product_thumbnail.html",
+		"/home/pawel/Development/porb/src/porb/static/sass/bootflat/_global.scss",
+		"/home/pawel/Development/porb/src/porb/static/sass/bootflat.scss",
+		"/home/pawel/Development/porb/.gitignore",
+		"/home/pawel/Development/porb/src/porb/static/sass/bootflat/_button.scss",
+		"/home/pawel/Development/porb/requirements.pip",
 		"/home/pawel/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/pawel/Development/porb/src/orders/models.py",
+		"/home/pawel/Development/porb/src/orders/views.py",
 		"/home/pawel/Development/porb/src/porb/settings.py",
 		"/home/pawel/Development/porb/src/products/templates/product_details.html",
 		"/home/pawel/Development/porb/src/orders/templates/checkout.html",
@@ -425,9 +480,7 @@
 		"/home/pawel/Development/porb/src/products/templates/homepage.html",
 		"/home/pawel/Development/porb/src/orders/admin.py",
 		"/home/pawel/Development/porb/src/customers/models.py",
-		"/home/pawel/Development/porb/src/orders/models.py",
 		"/home/pawel/Development/porb/src/customers/admin.py",
-		"/home/pawel/Development/porb/src/products/admin.py",
 		"/home/pawel/.virtualenvs/porb/lib/python2.7/site-packages/django/db/models/fields/__init__.py",
 		"/home/pawel/Development/porb/porb.sublime-project",
 		"/home/pawel/.local/share/Steam/steamapps/common/Besiege/Besiege_Data/Managed/Assembly-UnityScript.dll",
@@ -526,19 +579,11 @@
 		"/home/pawel/Development/newcomlink/gunnery/Vagrantfile",
 		"/home/pawel/Development/newcomlink/gunnery/gunnery/gunnery/wsgi.py",
 		"/home/pawel/Development/newcomlink/gunnery/gunnery/gunnery/uwsgiapp.py",
-		"/home/pawel/.virtualenvs/ncl/lib/python2.7/site-packages/django/core/wsgi.py",
-		"/home/pawel/.virtualenvs/ncl/lib/python2.7/site-packages/django/core/handlers/wsgi.py",
-		"/home/pawel/Development/newcomlink/gunnery/.gitignore",
-		"/home/pawel/Development/newcomlink/ncl/apache/django.wsgi",
-		"/home/pawel/Development/newcomlink/ncl/partner/admin.py",
-		"/home/pawel/Development/newcomlink/ncl/apache/django_dev_monitored.wsgi",
-		"/home/pawel/Development/newcomlink/ncl/apache/apache_django_wsgi.conf",
-		"/home/pawel/Development/newcomlink/ncl/apache/simulator.wsgi",
-		"/home/pawel/Development/newcomlink/gunnery/virtualenv/production/lib/python2.7/site-packages/pytz/zoneinfo/W-SU"
+		"/home/pawel/.virtualenvs/ncl/lib/python2.7/site-packages/django/core/wsgi.py"
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -553,6 +598,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			">\n",
 			"make_order",
 			"ramldre",
 			"sharedscreen-prescreened-offer",
@@ -607,7 +653,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -623,13 +669,73 @@
 						"selection":
 						[
 							[
-								270,
-								270
+								198,
+								198
 							]
 						],
 						"settings":
 						{
 							"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/products/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1455,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1387,
+								1387
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": -0.0,
+						"translation.y": 420.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/porb/settings.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2418,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								276,
+								276
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Theme - Afterglow/Afterglow-monokai.tmTheme",
 							"syntax": "Packages/Python/Python.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
@@ -642,171 +748,49 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "src/products/models.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1487,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								192,
-								192
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/orders/views.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1150,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								260,
-								260
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
 					"buffer": 3,
-					"file": "src/orders/models.py",
+					"file": "requirements.pip",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 395,
+						"buffer_size": 60,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								173,
-								173
+								60,
+								60
 							]
 						],
 						"settings":
 						{
-							"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"color_scheme": "Packages/Theme - Afterglow/Afterglow-monokai.tmTheme",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "/home/pawel/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 974,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								146,
-								146
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1518,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								250,
-								250
-							]
-						],
-						"settings":
-						{
-							"auto_indent": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
 					"file": "src/porb/urls.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 586,
+						"buffer_size": 726,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								170,
-								170
+								659,
+								659
 							]
 						],
 						"settings":
@@ -820,11 +804,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 5,
 					"file": "src/orders/forms.py",
 					"semi_transient": false,
 					"settings":
@@ -850,7 +834,194 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 11,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "src/porb/templates/base.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3004,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								795,
+								795
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Theme - Afterglow/Afterglow-monokai.tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/products/templates/_search.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1094,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								285,
+								285
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/products/templates/product_details.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2295,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								593,
+								593
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/products/templates/homepage.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 443,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								73,
+								73
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Theme - Afterglow/Afterglow-monokai.tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/products/templates/_product_thumbnail.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 822,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								358,
+								358
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "src/porb/static/sass/default.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 517,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								482,
+								482
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Theme - Afterglow/Afterglow-monokai.tmTheme",
+							"open_with_edit": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -873,11 +1044,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.413541666667,
 			1.0
 		],
 		"rows":
@@ -904,6 +1082,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"req",
+				"requirements.pip"
+			],
 			[
 				"prodmodels",
 				"src/products/models.py"
@@ -1025,7 +1207,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
@@ -1033,7 +1215,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 206.0,
+	"side_bar_width": 261.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
