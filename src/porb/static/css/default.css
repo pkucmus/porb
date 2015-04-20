@@ -1,28 +1,42 @@
+/* line 1, ../sass/default.sass */
 body {
   background-color: #f3f3f3;
-  padding-top: 70px; }
+  padding-top: 70px;
+}
 
+/* line 7, ../sass/default.sass */
 .grid-sizer {
-  width: 23.5%; }
+  width: 23.5%;
+}
 
+/* line 10, ../sass/default.sass */
 .gutter-sizer {
-  width: 2%; }
+  width: 2%;
+}
 
+/* line 13, ../sass/default.sass */
 .product {
   box-sizing: border-box;
   width: 23.5%;
-  margin: 0; }
-  .product .caption p.description {
-    overflow: hidden;
-    text-overflow: ellipsis; }
+  margin: 0;
+}
+/* line 18, ../sass/default.sass */
+.product .caption p.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
+/* line 28, ../sass/default.sass */
 .product-detail .item img {
-  height: 400px; }
+  height: 400px;
+}
 
+/* line 31, ../sass/default.sass */
 .footer {
-  margin-top: 30px; }
+  margin-top: 30px;
+}
 
+/* line 35, ../sass/default.sass */
 .btn-group .glyphicon {
-  line-height: 20px; }
-
-/*# sourceMappingURL=default.css.map */
+  line-height: 20px;
+}
