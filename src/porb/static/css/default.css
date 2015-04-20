@@ -25,4 +25,7 @@ body {
 .btn-group .glyphicon {
   line-height: 20px; }
 
+.navbar-brand img {
+  height: 25px; }
+
 /*# sourceMappingURL=default.css.map */

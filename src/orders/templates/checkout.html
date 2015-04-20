@@ -1,21 +1,58 @@
 {% extends 'base.html' %}
-{% load humanize %}
 {% load url from future %}
 
 {% block content %}
-
-<h2>Zamówienie</h2>
-
-<h4>Wybrany przez Ciebie przedmiot to:</h4>
-
-<p>
-  {{ product.name }} ({{product.price_gross|intcomma}} zł)
-</p>
-
 <form action="." method="post">
   {% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" value="zamawiam"/>
+  <div class="row">
+    <div class="col-xs-8">
+      <div class="jumbotron">
+        <div class="jumbotron-contents">
+          <h1><i class="glyphicon glyphicon-shopping-cart"></i> Zamówienie</h1>
+          <p>Sprawdź czy poniższe zamówienie się zgadza</p>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Przedmiot</th>
+                  <th>cena brutto</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{ product.name }}</td>
+                  <td>{{ product.price_gross|floatformat:2 }} zł</td>
+                </tr>
+                <tr>
+                  <td>Przesyłka kurierska</td>
+                  <td>0 zł</td>
+                </tr>
+                <tr>
+                  <td>Płatność przelewem</td>
+                  <td>0 zł</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="success">
+                  <th>Łącznie</th>
+                  <th>3000,00 zł</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <div class="jumbotron">
+        <div class="jumbotron-contents">
+          <h1><i class="glyphicon glyphicon-home"></i> Adres</h1>
+          <p>Podaj adres, na który chcesz otrzymać paczkę</p>
+          {{ form.as_p }}
+          <input type="submit" class="btn btn-info btn-lg btn-block" value="zamawiam"/>
+        </div>
+      </div>
+    </div>
+  </div>
 </form>
-
 {% endblock content %}
