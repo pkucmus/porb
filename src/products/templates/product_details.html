@@ -58,7 +58,12 @@
                 <p>Możliwość darmowej dostawy</p>
               </div>
               <div class="price-foot">
-                <a href="{% url 'checkout' product.id %}" class="btn btn-success">Kup teraz</a>
+              <form action="{% url 'cart' product.id %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-success btn-lg" role="button">
+                  Kup teraz
+                </button>
+             </form>
               </div>
             </li>
           </ul>

@@ -9,14 +9,23 @@ from orders.forms import CheckoutForm
 class CheckoutView(TemplateView):
     template_name = 'checkout.html'
 
-    def get_context_data(self, **kwargs):
+    def get_context_data(self, request):
+        products = []
+        if 'cart' in request.session:
+            for position in request.session['cart']:
+                products.append(
+                    {
+                        'product': Product.objects.get(pk=position['id']),
+                        'quantity': position['qty']
+                    }
+                )
         return {
-            'product': Product.objects.get(pk=kwargs['product_id']),
-            'form': CheckoutForm(initial={'product_id': kwargs['product_id']})
+            'products': products,
+            'form': CheckoutForm()
         }
 
     def get(self, request, *args, **kwargs):
-        context = self.get_context_data(**kwargs)
+        context = self.get_context_data(request)
         return self.render_to_response(context)
 
     def post(self, request, *args, **kwargs):
@@ -41,7 +50,7 @@ class CartView(View):
             request.session['cart'] = []
         for position in request.session['cart']:
             if position['id'] == kwargs['product_id']:
-                position['quantity'] += 1
+                position['qty'] += 1
                 is_in_cart = True
         if not is_in_cart:
             request.session['cart'].append(
@@ -50,4 +59,5 @@ class CartView(View):
                     'qty': 1
                 }
             )
+        request.session.save()
         return redirect('checkout')

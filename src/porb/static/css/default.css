@@ -40,3 +40,8 @@ body {
 .btn-group .glyphicon {
   line-height: 20px;
 }
+
+/* line 39, ../sass/default.sass */
+.navbar-brand img {
+  height: 25px;
+}
