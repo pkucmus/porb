@@ -15,12 +15,12 @@ urlpatterns = patterns(
         name='product_details'
     ),
     url(
-        r'^cart/(?P<product_id>[\d]+)/$',
+        r'^cart/add/$',
         order_views.CartView.as_view(),
         name='cart'
     ),
     url(
-        r'^cart/(?P<product_id>[\d]+)/delete/$',
+        r'^cart/delete/$',
         order_views.DeleteCartView.as_view(),
         name='cart_delete'
     ),

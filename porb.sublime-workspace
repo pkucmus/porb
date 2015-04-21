@@ -4,6 +4,54 @@
 		"selected_items":
 		[
 			[
+				"cart",
+				"cart_sum	statement"
+			],
+			[
+				"se",
+				"serialize"
+			],
+			[
+				"Ca",
+				"CartHandler	class"
+			],
+			[
+				"pro",
+				"product_id	param"
+			],
+			[
+				"Car",
+				"CartPossition	class"
+			],
+			[
+				"pos",
+				"position	statement"
+			],
+			[
+				"car",
+				"cart_data	statement"
+			],
+			[
+				"re",
+				"request	statement"
+			],
+			[
+				"fil",
+				"filter_kwargs	statement"
+			],
+			[
+				"qu",
+				"query_params	statement"
+			],
+			[
+				"fo",
+				"form-control"
+			],
+			[
+				"De",
+				"DecimalField	class"
+			],
+			[
 				"mar",
 				"margin-top"
 			],
@@ -14,10 +62,6 @@
 			[
 				"STATI",
 				"STATIC_URL	statement"
-			],
-			[
-				"pro",
-				"product"
 			],
 			[
 				"r",
@@ -76,10 +120,6 @@
 				"property	class"
 			],
 			[
-				"se",
-				"settings	param"
-			],
-			[
 				"set",
 				"settings	module"
 			],
@@ -118,10 +158,6 @@
 			[
 				"w",
 				"wsgi	module"
-			],
-			[
-				"re",
-				"request"
 			],
 			[
 				"nex",
@@ -215,7 +251,7 @@
 			"file": "src/products/views.py",
 			"settings":
 			{
-				"buffer_size": 487,
+				"buffer_size": 1243,
 				"line_ending": "Unix"
 			}
 		},
@@ -223,23 +259,31 @@
 			"file": "src/products/models.py",
 			"settings":
 			{
-				"buffer_size": 1455,
+				"buffer_size": 1536,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/porb/settings.py",
+			"file": "src/orders/models.py",
 			"settings":
 			{
-				"buffer_size": 2418,
+				"buffer_size": 395,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "requirements.pip",
+			"file": "src/orders/views.py",
 			"settings":
 			{
-				"buffer_size": 60,
+				"buffer_size": 2221,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/orders/handler.py",
+			"settings":
+			{
+				"buffer_size": 1557,
 				"line_ending": "Unix"
 			}
 		},
@@ -247,15 +291,7 @@
 			"file": "src/porb/urls.py",
 			"settings":
 			{
-				"buffer_size": 726,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/orders/forms.py",
-			"settings":
-			{
-				"buffer_size": 347,
+				"buffer_size": 920,
 				"line_ending": "Unix"
 			}
 		},
@@ -263,31 +299,15 @@
 			"file": "src/porb/templates/base.html",
 			"settings":
 			{
-				"buffer_size": 3004,
+				"buffer_size": 1148,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/products/templates/_search.html",
+			"file": "src/orders/templates/checkout.html",
 			"settings":
 			{
-				"buffer_size": 1094,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/products/templates/product_details.html",
-			"settings":
-			{
-				"buffer_size": 2295,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/products/templates/homepage.html",
-			"settings":
-			{
-				"buffer_size": 443,
+				"buffer_size": 2646,
 				"line_ending": "Unix"
 			}
 		},
@@ -295,7 +315,31 @@
 			"file": "src/products/templates/_product_thumbnail.html",
 			"settings":
 			{
-				"buffer_size": 822,
+				"buffer_size": 837,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/porb/templates/_nav.html",
+			"settings":
+			{
+				"buffer_size": 1606,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/products/templates/homepage.html",
+			"settings":
+			{
+				"buffer_size": 411,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/products/templates/product_details.html",
+			"settings":
+			{
+				"buffer_size": 2379,
 				"line_ending": "Unix"
 			}
 		},
@@ -303,7 +347,7 @@
 			"file": "src/porb/static/sass/default.sass",
 			"settings":
 			{
-				"buffer_size": 517,
+				"buffer_size": 614,
 				"line_ending": "Unix"
 			}
 		}
@@ -315,10 +359,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 400.0,
-		"last_filter": "sass",
+		"height": 140.0,
+		"last_filter": "menu",
 		"selected_items":
 		[
+			[
+				"menu",
+				"View: Toggle Menu"
+			],
 			[
 				"sass",
 				"Set Syntax: Sass"
@@ -416,7 +464,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 457.0
+		"width": 583.0
 	},
 	"console":
 	{
@@ -444,32 +492,40 @@
 		"/home/pawel/Development/porb/src/porb",
 		"/home/pawel/Development/porb/src/porb/static",
 		"/home/pawel/Development/porb/src/porb/static/css",
-		"/home/pawel/Development/porb/src/porb/static/js",
-		"/home/pawel/Development/porb/src/porb/static/sass/bootflat",
+		"/home/pawel/Development/porb/src/porb/static/sass",
 		"/home/pawel/Development/porb/src/porb/templates",
 		"/home/pawel/Development/porb/src/products",
 		"/home/pawel/Development/porb/src/products/templates"
 	],
 	"file_history":
 	[
-		"/home/pawel/Development/porb/src/products/admin.py",
+		"/home/pawel/Development/porb/src/porb/templates/_nav.html",
 		"/home/pawel/Development/porb/src/porb/templates/_footer.html",
+		"/home/pawel/Development/porb/src/orders/forms.py",
+		"/home/pawel/Development/porb/requirements.pip",
+		"/home/pawel/Development/porb/src/products/admin.py",
+		"/home/pawel/Development/porb/src/porb/settings.py",
+		"/home/pawel/.virtualenvs/porb/lib/python2.7/site-packages/django/views/generic/base.py",
 		"/home/pawel/Development/porb/src/products/templates/_product_thumbnail.html",
+		"/home/pawel/Development/porb/src/products/forms.py",
+		"/home/pawel/Development/porb/src/products/templates/_search.html",
+		"/home/pawel/Development/porb/src/products/templatetags/porb_search.py",
+		"/home/pawel/Development/porb/src/products/templates/homepage.html",
+		"/home/pawel/Development/porb/src/porb/static/css/default.css",
+		"/home/pawel/Development/porb/src/products/templates/product_details.html",
+		"/home/pawel/Development/porb/src/products/templates/_search_categories.html",
+		"/home/pawel/Development/porb/src/products/templatetags/__init__.py",
 		"/home/pawel/Development/porb/src/porb/static/sass/bootflat/_global.scss",
 		"/home/pawel/Development/porb/src/porb/static/sass/bootflat.scss",
 		"/home/pawel/Development/porb/.gitignore",
 		"/home/pawel/Development/porb/src/porb/static/sass/bootflat/_button.scss",
-		"/home/pawel/Development/porb/requirements.pip",
 		"/home/pawel/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/pawel/Development/porb/src/orders/models.py",
 		"/home/pawel/Development/porb/src/orders/views.py",
-		"/home/pawel/Development/porb/src/porb/settings.py",
-		"/home/pawel/Development/porb/src/products/templates/product_details.html",
 		"/home/pawel/Development/porb/src/orders/templates/checkout.html",
 		"/home/pawel/Development/porb/src/orders/templates/checkout_done.html",
 		"/home/pawel/.virtualenvs/porb/lib/python2.7/site-packages/django/forms/fields.py",
 		"/home/pawel/Development/porb/src/dump.json",
-		"/home/pawel/.virtualenvs/porb/lib/python2.7/site-packages/django/views/generic/base.py",
 		"/home/pawel/.virtualenvs/porb/lib/python2.7/site-packages/django/shortcuts.py",
 		"/home/pawel/.virtualenvs/porb/lib/python2.7/site-packages/django/template/loader.py",
 		"/home/pawel/.virtualenvs/porb/lib/python2.7/site-packages/django/forms/forms.py",
@@ -477,7 +533,6 @@
 		"/home/pawel/Development/porb/src/porb/templates/base.html",
 		"/home/pawel/Development/porb/src/products/models.py",
 		"/home/pawel/Development/porb/src/porb/urls.py",
-		"/home/pawel/Development/porb/src/products/templates/homepage.html",
 		"/home/pawel/Development/porb/src/orders/admin.py",
 		"/home/pawel/Development/porb/src/customers/models.py",
 		"/home/pawel/Development/porb/src/customers/admin.py",
@@ -571,15 +626,7 @@
 		"/home/pawel/Development/newcomlink/ref_id_service/service/local_settings.py",
 		"/home/pawel/Development/uwsgi.sh",
 		"/home/pawel/Development/newcomlink/ref_id_service/service/qa_settings.py",
-		"/home/pawel/Development/newcomlink/ref_id_service/vagrant/bootstrap.sh",
-		"/home/pawel/Development/newcomlink/ref_id_service/generator/migrations/0001_initial.py",
-		"/home/pawel/Development/newcomlink/gunnery/gunnery/gunnery/settings/production.py",
-		"/home/pawel/Development/newcomlink/gunnery/gunnery/gunnery/settings/common.py",
-		"/home/pawel/Development/newcomlink/gunnery/gunnery/gunnery/settings/__init__.py",
-		"/home/pawel/Development/newcomlink/gunnery/Vagrantfile",
-		"/home/pawel/Development/newcomlink/gunnery/gunnery/gunnery/wsgi.py",
-		"/home/pawel/Development/newcomlink/gunnery/gunnery/gunnery/uwsgiapp.py",
-		"/home/pawel/.virtualenvs/ncl/lib/python2.7/site-packages/django/core/wsgi.py"
+		"/home/pawel/Development/newcomlink/ref_id_service/vagrant/bootstrap.sh"
 	],
 	"find":
 	{
@@ -662,15 +709,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 487,
+						"buffer_size": 1243,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								198,
-								198
+								506,
+								506
 							]
 						],
 						"settings":
@@ -684,7 +731,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -693,104 +740,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1455,
+						"buffer_size": 1536,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1387,
-								1387
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": -0.0,
-						"translation.y": 420.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/porb/settings.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2418,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								276,
-								276
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/Theme - Afterglow/Afterglow-monokai.tmTheme",
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "requirements.pip",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 60,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								60,
-								60
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/Theme - Afterglow/Afterglow-monokai.tmTheme",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/porb/urls.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 726,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								659,
-								659
+								1052,
+								1052
 							]
 						],
 						"settings":
@@ -798,73 +756,6 @@
 							"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 							"syntax": "Packages/Python/Python.tmLanguage",
 							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/orders/forms.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 347,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								9,
-								9
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
-							"open_with_edit": true,
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 4,
-			"sheets":
-			[
-				{
-					"buffer": 6,
-					"file": "src/porb/templates/base.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3004,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								795,
-								795
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/Theme - Afterglow/Afterglow-monokai.tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -875,117 +766,25 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "src/products/templates/_search.html",
+					"buffer": 2,
+					"file": "src/orders/models.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1094,
+						"buffer_size": 395,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								285,
-								285
+								395,
+								395
 							]
 						],
 						"settings":
 						{
-							"open_with_edit": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "src/products/templates/product_details.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2295,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								593,
-								593
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "src/products/templates/homepage.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 443,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								73,
-								73
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/Theme - Afterglow/Afterglow-monokai.tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "src/products/templates/_product_thumbnail.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 822,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								358,
-								358
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -995,33 +794,310 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "src/porb/static/sass/default.sass",
+					"buffer": 3,
+					"file": "src/orders/views.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 517,
+						"buffer_size": 2221,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								482,
-								482
+								817,
+								817
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 480.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/orders/handler.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1557,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								656,
+								656
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 420.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/porb/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 920,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								475,
+								475
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "src/porb/templates/base.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"color_scheme": "Packages/Theme - Afterglow/Afterglow-monokai.tmTheme",
-							"open_with_edit": true,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/orders/templates/checkout.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2646,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2043,
+								2043
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/products/templates/_product_thumbnail.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 837,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/porb/templates/_nav.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1606,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								700,
+								700
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/products/templates/homepage.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 411,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "src/products/templates/product_details.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2379,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2194,
+								2194
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 374.0,
+						"translation.y": 660.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "src/porb/static/sass/default.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 614,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								611,
+								611
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Theme - Afterglow/Afterglow-monokai.tmTheme",
+							"open_with_edit": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
 					"type": "text"
 				}
 			]
@@ -1055,7 +1131,7 @@
 		"cols":
 		[
 			0.0,
-			0.413541666667,
+			0.55459049126,
 			1.0
 		],
 		"rows":
@@ -1064,7 +1140,7 @@
 			1.0
 		]
 	},
-	"menu_visible": true,
+	"menu_visible": false,
 	"output.find_results":
 	{
 		"height": 0.0
@@ -1082,6 +1158,22 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"ordermode",
+				"src/orders/models.py"
+			],
+			[
+				"nav",
+				"src/porb/templates/_nav.html"
+			],
+			[
+				"thum",
+				"src/products/templates/_product_thumbnail.html"
+			],
+			[
+				"urls",
+				"src/porb/urls.py"
+			],
 			[
 				"req",
 				"requirements.pip"
@@ -1147,10 +1239,6 @@
 				"ncl/api/v3/views.py"
 			],
 			[
-				"urls",
-				"ncl/urls.py"
-			],
-			[
 				"settin",
 				"ncl/settings.py"
 			],
@@ -1207,14 +1295,14 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
 	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 261.0,
 	"status_bar_visible": true,
 	"template_settings":

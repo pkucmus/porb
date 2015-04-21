@@ -15,8 +15,10 @@
               <thead>
                 <tr>
                   <th>Przedmiot</th>
-                  <th>cena brutto</th>
+                  <th>cena</th>
                   <th>ilość</th>
+                  <th>wartość</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
@@ -25,14 +27,12 @@
                     <td>{{ position.product.name }}</td>
                     <td>{{ position.product.price_gross|floatformat:2 }} zł</td>
                     <td>{{ position.quantity }}</td>
+                    <td>{{ position.sum|floatformat:2 }} zł</td>
                     <td>
-                      <form action="{% url 'cart_delete' position.product.id %}" method="post">
-                        {% csrf_token %}
-                        <button type="submit"
-                          class="btn btn-danger btn-sm" role="button">
-                          <i class="glyphicon glyphicon-remove"></i>
-                        </button>
-                      </form>
+                      <a href="{% url 'cart_delete' %}?product_id={{ position.product.id }}" type="submit"
+                        class="btn btn-danger btn-sm" role="button">
+                        <i class="glyphicon glyphicon-remove"></i>
+                      </a>
                     </td>
                   </tr>
                 {% endfor %}
@@ -41,10 +41,12 @@
                   <td>0 zł</td>
                   <td></td>
                   <td></td>
+                  <td></td>
                 </tr>
                 <tr>
                   <td>Płatność przelewem</td>
                   <td>0 zł</td>
+                  <td></td>
                   <td></td>
                   <td></td>
                 </tr>
@@ -52,8 +54,9 @@
               <tfoot>
                 <tr class="success">
                   <th>Łącznie</th>
-                  <th>3000,00 zł</th>
                   <td></td>
+                  <td></td>
+                  <th>{{ cart_sum|floatformat:2 }} zł</th>
                   <td></td>
                 </tr>
               </tfoot>
