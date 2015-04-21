@@ -20,21 +20,32 @@
                 </tr>
               </thead>
               <tbody>
-                {% for position in products %}
+                {% for position in positions %}
                   <tr>
                     <td>{{ position.product.name }}</td>
                     <td>{{ position.product.price_gross|floatformat:2 }} zł</td>
                     <td>{{ position.quantity }}</td>
+                    <td>
+                      <form action="{% url 'cart_delete' position.product.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit"
+                          class="btn btn-danger btn-sm" role="button">
+                          <i class="glyphicon glyphicon-remove"></i>
+                        </button>
+                      </form>
+                    </td>
                   </tr>
                 {% endfor %}
                 <tr>
                   <td>Przesyłka kurierska</td>
                   <td>0 zł</td>
                   <td></td>
+                  <td></td>
                 </tr>
                 <tr>
                   <td>Płatność przelewem</td>
                   <td>0 zł</td>
+                  <td></td>
                   <td></td>
                 </tr>
               </tbody>
@@ -42,6 +53,7 @@
                 <tr class="success">
                   <th>Łącznie</th>
                   <th>3000,00 zł</th>
+                  <td></td>
                   <td></td>
                 </tr>
               </tfoot>

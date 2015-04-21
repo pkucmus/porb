@@ -34,5 +34,6 @@ class ProductView(TemplateView):
 
     def get_context_data(self, **kwargs):
         return {
+            'search_form': SearchForm(self.request.GET),
             'product': Product.objects.get(pk=kwargs['product_id']),
         }

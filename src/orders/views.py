@@ -1,27 +1,31 @@
 from django.views.generic import View, TemplateView
-from django.shortcuts import render, redirect
+from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
 
 from products.models import Product
 from orders.models import Order
 from orders.forms import CheckoutForm
+from products.forms import SearchForm
 
 
 class CheckoutView(TemplateView):
     template_name = 'checkout.html'
 
     def get_context_data(self, request):
-        products = []
+        positions = []
         if 'cart' in request.session:
             for position in request.session['cart']:
-                products.append(
+                positions.append(
                     {
                         'product': Product.objects.get(pk=position['id']),
                         'quantity': position['qty']
                     }
                 )
         return {
-            'products': products,
-            'form': CheckoutForm()
+            'positions': positions,
+            'form': CheckoutForm(),
+            'search_form': SearchForm(self.request.GET)
         }
 
     def get(self, request, *args, **kwargs):
@@ -60,4 +64,14 @@ class CartView(View):
                 }
             )
         request.session.save()
-        return redirect('checkout')
+        return HttpResponseRedirect(reverse('checkout'))
+
+
+class DeleteCartView(View):
+    def post(self, request, *args, **kwargs):
+        for position in request.session['cart']:
+            if position['id'] == kwargs['product_id']:
+                request.session['cart'].remove(position)
+
+        request.session.save()
+        return HttpResponseRedirect(reverse('checkout'))

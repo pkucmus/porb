@@ -20,6 +20,11 @@ urlpatterns = patterns(
         name='cart'
     ),
     url(
+        r'^cart/(?P<product_id>[\d]+)/delete/$',
+        order_views.DeleteCartView.as_view(),
+        name='cart_delete'
+    ),
+    url(
         r'^checkout/$',
         order_views.CheckoutView.as_view(),
         name='checkout'
