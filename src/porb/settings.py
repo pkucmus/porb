@@ -37,7 +37,6 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
     'products',
     'orders',
     'sorl.thumbnail',

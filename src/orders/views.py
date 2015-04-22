@@ -6,7 +6,10 @@ from django.core.urlresolvers import reverse
 from products.models import Product
 from products.forms import SearchForm
 
-from orders.models import Order
+from orders.models import (
+    Order,
+    OrderPossitions,
+)
 from orders.forms import CheckoutForm
 from orders.handler import CartHandler
 
@@ -39,14 +42,26 @@ class CheckoutView(TemplateView):
         }
 
     def post(self, request, *args, **kwargs):
+        cart_handler = CartHandler(self.request)
         form = CheckoutForm(request.POST)
-        if form.is_valid():
+        if form.is_valid() and cart_handler.cart:
             order = Order.objects.create(
                 status='O',
-                product=Product.objects.get(pk=kwargs['product_id']),
-                address=form.data['address']
+                address=form.data['address'],
+            )
+            for position in cart_handler.cart:
+                product = Product.objects.get(pk=position.product_id)
+                order_position = OrderPossitions(
+                    product=product,
+                    qty=position.qty
                 )
-            return render(request, 'checkout_done.html', {'order': order})
+                order.order_possitions.add(order_position)
+                cart_handler.purge()
+            return render(
+                request, 'checkout_done.html', {
+                    'order': order,
+                    'search_form': SearchForm(),
+                })
         context = self.get_context_data(**kwargs)
         context['form'] = form
         return self.render_to_response(context)

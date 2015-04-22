@@ -55,3 +55,7 @@ class CartHandler(object):
             self.cart.remove(position)
         self.commit()
         return self.cart
+
+    def purge(self):
+        self.cart = []
+        self.commit()

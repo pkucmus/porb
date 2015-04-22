@@ -1,18 +1,23 @@
 {% extends 'base.html' %}
-{% load humanize %}
 {% load url from future %}
 
 {% block content %}
 
-<h2>Dziękujemy</h2>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="alert alert-success">
+      <h2>Dziękujemy</h2>
 
-<p>
-  Twoje zamówienie o numerze: {{ order.id }} zostało przyjęte do realizacji
-</p>
+      <p>
+        Twoje zamówienie o numerze: {{ order.id }} zostało przyjęte do realizacji
+      </p>
 
-<p>
-  <b>Dane adresowe:</b></br>
-  {{ order.address }}
-</p>
+      <p>
+        <b>Dane adresowe:</b></br>
+        {{ order.address }}
+      </p>
+    </div>
+  </div>
+</div>
 
 {% endblock content %}
