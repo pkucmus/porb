@@ -45,6 +45,6 @@ class Product(models.Model):
 class ProductImage(models.Model):
     product = models.ForeignKey(Product, related_name='images')
     image = models.ImageField(
-        upload_to='{}/products/'.format(settings.MEDIA_ROOT),
+        upload_to='products/',
         verbose_name='photo'
     )

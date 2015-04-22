@@ -6,7 +6,7 @@
 <ul>
   {% for product in products %}
     <li>
-      <img src='http://www.lenovo.com/images/OneWebImages/FormFactor/Laptops/IdeaPad/400x300/lenovo-laptop-ideapad-yoga-13-orange-back.png' />
+      <img src='{{ product.images.first.image.url }}' height="350" />
       {{ product.name }} ({{product.price_gross|intcomma}} zł)
       <a href="{% url 'product_details' product.id %}">szczegóły</a>
     </li>
