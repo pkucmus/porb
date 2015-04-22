@@ -47,7 +47,11 @@ class CheckoutView(TemplateView):
         if form.is_valid() and cart_handler.cart:
             order = Order.objects.create(
                 status='O',
-                address=form.data['address'],
+                name=form.data['name'],
+                address_line_1=form.data['address_line_1'],
+                city=form.data['city'],
+                post_code=form.data['post_code'],
+                email=form.data['email'],
             )
             for position in cart_handler.cart:
                 product = Product.objects.get(pk=position.product_id)

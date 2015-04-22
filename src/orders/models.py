@@ -15,7 +15,11 @@ ORDER_STATUSES = (
 
 class Order(models.Model):
     status = models.CharField(choices=ORDER_STATUSES, max_length=1)
-    address = models.TextField()
+    name = models.CharField(max_length=256)
+    address_line_1 = models.CharField(max_length=256)
+    city = models.CharField(max_length=64)
+    post_code = models.CharField(max_length=6)
+    email = models.CharField(max_length=128)
 
     class Meta:
         verbose_name = 'zamówienie'

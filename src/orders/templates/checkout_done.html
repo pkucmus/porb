@@ -14,7 +14,13 @@
 
       <p>
         <b>Dane adresowe:</b></br>
-        {{ order.address }}
+        <dl class="dl-horizontal">
+          <dt>Imię i nazwisko</dt><dd>{{ order.name }}</dd>
+          <dt>Ulica</dt><dd>{{ order.address_line_1 }}</dd>
+          <dt>Miasto</dt><dd>{{ order.city }}</dd>
+          <dt>Kod pocztowy</dt><dd>{{ order.post_code }}</dd>
+          <dt>e-mail</dt><dd>{{ order.email }}</dd>
+        </dl>
       </p>
     </div>
   </div>

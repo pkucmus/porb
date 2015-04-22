@@ -14,8 +14,10 @@ class OrderAdmin(admin.ModelAdmin):
     inlines = [
         OrderPossitionsInline,
     ]
-    list_display = ('pk', 'address', 'status', )
+    list_display = (
+        'pk', 'name', 'address_line_1', 'city', 'post_code', 'email', 'status',
+    )
     list_filter = ('status', )
-    search_fields = ('address', )
+    search_fields = ('name', 'address_line_1', 'city', 'post_code', 'email', )
 
 admin.site.register(Order, OrderAdmin)
